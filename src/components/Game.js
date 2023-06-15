@@ -65,7 +65,7 @@ function Game() {
     if (result) {
       setWinner(result);
     }
-  }, [squares]);
+  }, [squares, history]);
 
   const handleStep = (index) => {
     setStep(index);
