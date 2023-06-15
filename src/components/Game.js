@@ -60,12 +60,12 @@ function Game() {
   };
 
   useEffect(() => {
-    setHistory(history.concat([squares]));
+    setHistory(history => history.concat([squares]));
     const result = calculateWinner(squares);
     if (result) {
       setWinner(result);
     }
-  }, [squares, history]);
+  }, [squares]);
 
   const handleStep = (index) => {
     setStep(index);
